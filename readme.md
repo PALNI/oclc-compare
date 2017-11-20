@@ -16,7 +16,13 @@ Place MARC records for library 1 in the library1 folder, and the MARC records fo
 in the library2 folder.  You can place multiple MARC files in each folder, the script will
 process every .mrc file found in each folder.
 
-Run oclc_compare.py.  The output will count the number of of OCLC numbers from the library1
-folder that are not found in the library2 folder.
+Run `python3 oclc_compare.py`.  This script creates two output files of OCLC numbers.  The output file 
+from library 1 will include title, author, and publication date as well as OCLC number.
+
+When the script finishes, you will see 'finished library2' output in your Terminal. 
+
+Run `python3 compare_lookup.py`.  This script will look up all of the OCLC numbers from 
+library1 in the library2 set of OCLC numbers.  If a match is *not* found, the OCLC number,
+title, author, publication date from the library1 set will be written to a final output file.
 
 
